@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:body>
+    <p:dialog widgetVar="personAddFavoriteColorDialogWidget" id="personAddFavoriteColorDialogId" height="150" width="500" modal="true" closable="true" draggable="false"
+              resizable="false">
+        <h:form id="personAddFavoriteColorDialogForm" prependId="false">
+            #{bundle.personAddFavoriteColorTo}: <h:outputText value="#{personBean.personWithFavoriteColors.name}" />
+            <br />
+            <p:autoComplete forceSelection="true" value="#{personBean.favoriteColor}" label="#{bundle.favoriteColor}" required="true" var="favoriteColor"
+                            itemLabel="#{favoriteColor.name}" itemValue="#{favoriteColor}" completeMethod="#{personBean.getRemainingFavoriteColors}" dropdown="true" />
+            <br />
+            <br />
+
+            <p:commandButton value="#{bundle.add}" icon="pi pi-plus" action="#{personBean.addFavoriteColorToPerson()}" update=":messageGrowl :personsForm:personsTable"
+                             oncomplete="closeDialogIfSucess(xhr, status, args,PF('personAddFavoriteColorDialogWidget'), 'personAddFavoriteColorDialogId')" />
+            <p:commandButton value="#{bundle.cancel}" icon="pi pi-ban" onclick="PF('personAddFavoriteColorDialogWidget').hide()" type="button" />
+        </h:form>
+    </p:dialog>
+</h:body>
+</html>

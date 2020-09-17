@@ -19,7 +19,7 @@
 					<p:column>
 						<p:commandButton icon="pi pi-info" onclick="PF('personDetailDialogWidget').show()" update=":personDetailDialogForm" >
 							<f:setPropertyActionListener target="#{personBean.personWithLanguagesForDetail}" value="#{person}" />
-						</p:commandButton> 
+						</p:commandButton>
 						<p:spacer width="10px" />
 						<p:commandButton icon="pi pi-pencil" update=":personUpdateDialogForm" onclick="PF('personUpdateDialogWidget').show()" >
 							<f:setPropertyActionListener target="#{personBean.person}" value="#{person}" />
@@ -32,6 +32,25 @@
 						<p:commandButton value="#{bundle.languagePlural}" icon="pi pi-pencil" ajax="false"
 							action="#{personBean.editPersonLanguages()}">
 								<f:setPropertyActionListener target="#{personBean.person}" value="#{person}" />
+						</p:commandButton>
+					</p:column>
+
+					<p:column>
+						<p:commandButton icon="pi pi-info" onclick="PF('personDetailDialogWidget').show()" update=":personDetailDialogForm" >
+							<f:setPropertyActionListener target="#{personBean.personWithFavoriteColorsForDetail}" value="#{person}" />
+						</p:commandButton>
+						<p:spacer width="10px" />
+						<p:commandButton icon="pi pi-pencil" update=":personUpdateDialogForm" onclick="PF('personUpdateDialogWidget').show()" >
+							<f:setPropertyActionListener target="#{personBean.person}" value="#{person}" />
+						</p:commandButton>
+						<p:spacer width="10px" />
+						<p:commandButton icon="pi pi-trash" update=":personDeleteDialogForm" onclick="PF('personDeleteDialogWidget').show()" >
+							<f:setPropertyActionListener target="#{personBean.person}" value="#{person}" />
+						</p:commandButton>
+						<p:spacer width="10px" />
+						<p:commandButton value="#{bundle.favoriteColorPlural}" icon="pi pi-pencil" ajax="false"
+										 action="#{personBean.editPersonFavoriteColors()}">
+							<f:setPropertyActionListener target="#{personBean.person}" value="#{person}" />
 						</p:commandButton>
 					</p:column>
 

@@ -8,6 +8,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
+import ch.gibm.entity.FavoriteColor;
 import com.sun.faces.context.flash.ELFlash;
 
 import ch.gibm.entity.Language;
@@ -22,20 +23,27 @@ public class PersonBean extends AbstractBean implements Serializable {
 	private static final String SELECTED_PERSON = "selectedPerson";
 
 	private Language language;
+	private FavoriteColor favoriteColor;
+	private Person personWithFavoriteColors;
+	private Person personWithFavoriteColorsForDetail;
 	private Person person;
 	private Person personWithLanguages;
 	private Person personWithLanguagesForDetail;
 
 	@ManagedProperty(value="#{languageBean}")
 	private LanguageBean languageBean;
+
+	@ManagedProperty(value="#{favoriteColorBean}")
+	private FavoriteColorBean favoriteColorBean;
 	
 
 	private List<Person> persons;
 	private PersonFacade personFacade;
 
+	/*
 	public PersonBean() {
 	super();	
-	}
+	} */
 	
 	public void createPerson() {
 		try {
@@ -138,6 +146,65 @@ public class PersonBean extends AbstractBean implements Serializable {
 		return "/pages/public/person/personLanguages/personLanguages.xhtml";
 	}
 
+	public void addFavoriteColorToPerson() {
+		try {
+			getPersonFacade().addFavoriteColorToPerson(favoriteColor.getId(), personWithFavoriteColors.getId());
+			closeDialog();
+			displayInfoMessageToUser("Added with success");
+			reloadPersonWithFavoriteColors();
+			resetFavoriteColor();
+		} catch (Exception e) {
+			keepDialogOpen();
+			displayErrorMessageToUser("A problem occurred while saving. Try again later");
+			e.printStackTrace();
+		}
+	}
+
+	public void removeFavoriteColorFromPerson() {
+		try {
+			getPersonFacade().removeFavoriteColorFromPerson(favoriteColor.getId(), personWithFavoriteColors.getId());
+			closeDialog();
+			displayInfoMessageToUser("Removed with success");
+			reloadPersonWithFavoriteColors();
+			resetFavoriteColor();
+		} catch (Exception e) {
+			keepDialogOpen();
+			displayErrorMessageToUser("A problem occurred while removing. Try again later");
+			e.printStackTrace();
+		}
+	}
+
+	public Person getPersonWithFavoriteColors() {
+		if (personWithFavoriteColors == null) {
+			person = (Person) ELFlash.getFlash().get(SELECTED_PERSON);
+			personWithFavoriteColors = getPersonFacade().findPersonWithAllFavoriteColors(person.getId());
+		}
+
+		return personWithFavoriteColors;
+	}
+
+	public void setPersonWithFavoriteColorsForDetail(Person person) {
+		personWithFavoriteColorsForDetail = getPersonFacade().findPersonWithAllFavoriteColors(person.getId());
+	}
+
+	public Person getPersonWithFavoriteColorsForDetail() {
+		if (personWithFavoriteColorsForDetail == null) {
+			personWithFavoriteColorsForDetail = new Person();
+			personWithFavoriteColorsForDetail.setFavoriteColors(new ArrayList<FavoriteColor>());
+		}
+
+		return personWithFavoriteColorsForDetail;
+	}
+
+	public void resetPersonWithFavoriteColorsForDetail() {
+		personWithFavoriteColorsForDetail = new Person();
+	}
+
+	public String editPersonFavoriteColors() {
+		ELFlash.getFlash().put(SELECTED_PERSON, person);
+		return "/pages/public/person/personFavoriteColors/personFavoriteColors.xhtml";
+	}
+
 	public PersonFacade getPersonFacade() {
 		if (personFacade == null) {
 			personFacade = new PersonFacade();
@@ -162,6 +229,10 @@ public class PersonBean extends AbstractBean implements Serializable {
 		this.languageBean = languageBean;
 	}
 
+	public void setFavoriteColorBean(FavoriteColorBean favoriteColorBean) {
+		this.favoriteColorBean = favoriteColorBean;
+	}
+
 	public List<Person> getAllPersons() {
 		if (persons == null) {
 			loadPersons();
@@ -175,6 +246,16 @@ public class PersonBean extends AbstractBean implements Serializable {
 		List<Language> res = new ArrayList<Language>(this.languageBean.getAllLanguages());
 		//remove already added languages
 		res.removeAll(personWithLanguages.getLanguages());
+		//remove when name not occurs
+		res.removeIf(l -> l.getName().toLowerCase().contains(name.toLowerCase()) == false);
+		return res;
+	}
+
+	public List<FavoriteColor> getRemainingFavoriteColors(String name) {
+		//get all favoriteColors as copy
+		List<FavoriteColor> res = new ArrayList<FavoriteColor>(this.favoriteColorBean.getAllFavoriteColors());
+		//remove already added favoriteColors
+		res.removeAll(personWithFavoriteColors.getFavoriteColors());
 		//remove when name not occurs
 		res.removeIf(l -> l.getName().toLowerCase().contains(name.toLowerCase()) == false);
 		return res;
@@ -206,5 +287,25 @@ public class PersonBean extends AbstractBean implements Serializable {
 
 	private void reloadPersonWithLanguages() {
 		personWithLanguages = getPersonFacade().findPersonWithAllLanguages(person.getId());
+	}
+
+	public FavoriteColor getFavoriteColor() {
+		if (favoriteColor == null) {
+			favoriteColor = new FavoriteColor();
+		}
+
+		return favoriteColor;
+	}
+
+	public void setFavoriteColor(FavoriteColor favoriteColor) {
+		this.favoriteColor = favoriteColor;
+	}
+
+	public void resetFavoriteColor() {
+		favoriteColor = new FavoriteColor();
+	}
+
+	private void reloadPersonWithFavoriteColors() {
+		personWithFavoriteColors = getPersonFacade().findPersonWithAllFavoriteColors(person.getId());
 	}
 }
