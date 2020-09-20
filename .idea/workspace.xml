@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eb8471d-bc6e-41ac-a87d-871d02739374" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JSFApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JSFApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/PersonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/PersonBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/facade/PersonFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/facade/PersonFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSource/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personDetailDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personDetailDialog.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/templates/left.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/templates/left.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +74,9 @@
       <workItem from="1599737648002" duration="2634000" />
       <workItem from="1599742339769" duration="7167000" />
       <workItem from="1599750899624" duration="8900000" />
-      <workItem from="1600254272922" duration="3226000" />
+      <workItem from="1600254272922" duration="4986000" />
+      <workItem from="1600425468609" duration="31000" />
+      <workItem from="1600605450939" duration="1835000" />
     </task>
     <servers />
   </component>
@@ -101,9 +94,10 @@
     <state x="304" y="187" width="1071" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1599738815483" />
     <state x="2010" y="65" width="1224" height="951" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599828957266" />
     <state x="2010" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.23.1920.1057/0.23.1680.977@1680.23.1920.1057" timestamp="1599829523975" />
-    <state x="2453" y="231" key="#com.intellij.ide.util.MemberChooser" timestamp="1599747314879">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1600607352978">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1600607352978" />
     <state x="2453" y="231" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599747314879" />
     <state x="577" y="322" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1600328590806">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -277,7 +271,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java</url>
-          <line>46</line>
+          <line>55</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

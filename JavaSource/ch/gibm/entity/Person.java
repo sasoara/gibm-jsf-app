@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
 import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -22,6 +24,13 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private Date date= new Date();
+    private long time = date.getTime();
+    private Timestamp creatingTimeStamp = new Timestamp(time);
+
+    // https://www.youtube.com/watch?v=dOvYkzKfsdg
+    // https://tecadmin.net/get-current-timestamp-in-java/
+    // https://www.youtube.com/watch?v=dOvYkzKfsdg
 
 
     @ManyToMany
@@ -45,6 +54,14 @@ public class Person implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Timestamp getCreatingTimeStamp() {
+        return creatingTimeStamp;
+    }
+
+    public void setCreatingTimeStamp(Timestamp creatingTimeStamp) {
+        this.creatingTimeStamp = creatingTimeStamp;
     }
 
     public List<Language> getLanguages() {
