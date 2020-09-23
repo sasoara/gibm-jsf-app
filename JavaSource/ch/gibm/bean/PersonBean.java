@@ -47,6 +47,7 @@ public class PersonBean extends AbstractBean implements Serializable {
 	
 	public void createPerson() {
 		try {
+			person.setAge();
 			getPersonFacade().createPerson(person);
 			closeDialog();
 			displayInfoMessageToUser("Created with success");

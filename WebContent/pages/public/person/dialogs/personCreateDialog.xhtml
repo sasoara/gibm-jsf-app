@@ -12,7 +12,10 @@
 			<h:panelGrid columns="2">
 				<h:outputText value="* #{bundle.personName}" />
 				<p:inputText value="#{personBean.person.name}" required="true" label="#{bundle.personName}" />
-		
+				
+				<h:outputText value="* #{bundle.personBirthdate}" />
+        		<p:datePicker value="#{personBean.person.birthdate}" required="true" label="#{bundle.personBirthdate}" pattern="yyyy/MM/dd" monthNavigator="true" yearNavigator="true" yearRange="1900:2020" />
+				
 				<p:commandButton id="saveBtn" value="#{bundle.create}" icon="pi pi-plus"
 					action="#{personBean.createPerson()}"
 					onclick="$('#saveBtn').attr('disabled',true);"

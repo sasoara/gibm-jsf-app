@@ -8,6 +8,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
@@ -24,16 +27,14 @@ public class Person implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private Date date= new Date();
-    private long time = date.getTime();
-    private Timestamp creatingTimeStamp = new Timestamp(time);
+    private Date birthdate;
+    private String age;
+    private Timestamp creatingTimeStamp = new Timestamp(new Date().getTime());
 
     // https://www.youtube.com/watch?v=dOvYkzKfsdg
     // https://tecadmin.net/get-current-timestamp-in-java/
-    // https://www.youtube.com/watch?v=dOvYkzKfsdg
 
-
-    @ManyToMany
+	@ManyToMany
     private List<Language> languages;
 
     // ManyToOne
@@ -54,6 +55,28 @@ public class Person implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Date getBirthdate() {
+        return birthdate;
+    }
+
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
+    }
+
+    public String getAge() {
+		return age;
+	}
+
+    public void setAge() {
+        LocalDate localDate = birthdate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        int day = localDate.getDayOfMonth();
+        int month = localDate.getMonthValue();
+        int year = localDate.getYear();
+        LocalDate today = LocalDate.now();
+        LocalDate birthday = LocalDate.of(year, month, day);
+        age = String.valueOf(Period.between(birthday, today).getYears());
     }
 
     public Timestamp getCreatingTimeStamp() {

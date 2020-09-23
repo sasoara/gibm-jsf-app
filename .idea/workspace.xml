@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7eb8471d-bc6e-41ac-a87d-871d02739374" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/PersonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/PersonBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSource/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/messages.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personCreateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personCreateDialog.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +66,19 @@
       <recent name="$PROJECT_DIR$/WebContent/pages/public/person" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,9 +110,10 @@
     <state x="304" y="187" width="1071" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1599738815483" />
     <state x="2010" y="65" width="1224" height="951" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599828957266" />
     <state x="2010" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.23.1920.1057/0.23.1680.977@1680.23.1920.1057" timestamp="1599829523975" />
-    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1600607352978">
+    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1600781427246">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600781427246" />
     <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1600607352978" />
     <state x="2453" y="231" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599747314879" />
     <state x="577" y="322" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1600328590806">
@@ -108,6 +125,10 @@
     </state>
     <state x="2367" y="185" width="885" height="708" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599828955380" />
     <state x="1784" y="216" width="610" height="729" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/1680.23.1920.1057/0.23.1680.977@1680.23.1920.1057" timestamp="1599829520588" />
+    <state x="277" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600780969453">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="277" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1600780969453" />
     <state width="1126" height="265" key="GridCell.Tab.0.bottom" timestamp="1600032089448">
       <screen x="0" y="23" width="1680" height="971" />
     </state>
@@ -265,13 +286,17 @@
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2945" y="0" width="655" height="751" key="dock-window-9/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599747881521" />
+    <state x="505" y="233" key="search.everywhere.popup" timestamp="1600772983397">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1600772983397" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java</url>
-          <line>55</line>
+          <line>56</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
