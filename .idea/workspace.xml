@@ -2,14 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7eb8471d-bc6e-41ac-a87d-871d02739374" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/LoginBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/UserBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/facade/UserFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/filter/AdminFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/filter/LoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/pages/protected/templates/super.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/pages/public/accessDenied.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebContent/pages/public/login.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/PersonBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/bean/PersonBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/ch/gibm/entity/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSource/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSource/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/messages.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personCreateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personCreateDialog.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/favoritecolor/dialogs/favoriteColorCreateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/favoritecolor/dialogs/favoriteColorCreateDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/favoritecolor/dialogs/favoriteColorDeleteDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/favoritecolor/dialogs/favoriteColorDeleteDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/favoritecolor/dialogs/favoriteColorDetailDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/favoritecolor/dialogs/favoriteColorDetailDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/favoritecolor/dialogs/favoriteColorUpdateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/favoritecolor/dialogs/favoriteColorUpdateDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/favoritecolor/favoriteColorIndex.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/favoritecolor/favoriteColorIndex.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/language/dialogs/langCreateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/language/dialogs/langCreateDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/language/dialogs/langDeleteDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/language/dialogs/langDeleteDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/language/dialogs/langDetailDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/language/dialogs/langDetailDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/language/dialogs/langUpdateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/language/dialogs/langUpdateDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/language/languageIndex.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/language/languageIndex.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personCreateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/dialogs/personCreateDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personDeleteDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/dialogs/personDeleteDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personDetailDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/dialogs/personDetailDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/dialogs/personUpdateDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/dialogs/personUpdateDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personFavoriteColors/dialogs/personAddFavoriteColorDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personFavoriteColors/dialogs/personAddFavoriteColorDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personFavoriteColors/dialogs/personRemoveFavoriteColorDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personFavoriteColors/dialogs/personRemoveFavoriteColorDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personFavoriteColors/personFavoriteColors.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personFavoriteColors/personFavoriteColors.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personIndex.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personIndex.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personLanguages/dialogs/personAddLanguageDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personLanguages/dialogs/personAddLanguageDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personLanguages/dialogs/personRemoveLanguageDialog.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personLanguages/dialogs/personRemoveLanguageDialog.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/person/personLanguages/personLanguages.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/person/personLanguages/personLanguages.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/templates/left.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/templates/left.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/templates/master.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/templates/master.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/pages/public/templates/top.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/pages/protected/templates/top.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +56,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WebContent/pages/public/person/personLanguages/dialogs/personAddLanguageDialog.xhtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebContent/pages/protected/person/personLanguages/dialogs/personAddLanguageDialog.xhtml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -63,6 +92,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/WebContent/pages/protected" />
       <recent name="$PROJECT_DIR$/WebContent/pages/public/person" />
     </key>
   </component>
@@ -93,6 +123,8 @@
       <workItem from="1600254272922" duration="4986000" />
       <workItem from="1600425468609" duration="31000" />
       <workItem from="1600605450939" duration="1835000" />
+      <workItem from="1601742338579" duration="862000" />
+      <workItem from="1601834790337" duration="4446000" />
     </task>
     <servers />
   </component>
@@ -110,10 +142,11 @@
     <state x="304" y="187" width="1071" height="776" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1599738815483" />
     <state x="2010" y="65" width="1224" height="951" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599828957266" />
     <state x="2010" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.23.1920.1057/0.23.1680.977@1680.23.1920.1057" timestamp="1599829523975" />
-    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1600781427246">
+    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1601835463147">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600781427246" />
+    <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1601835463147" />
+    <state x="676" y="231" key="#com.intellij.ide.util.MemberChooser/0.23.1680.971@0.23.1680.971" timestamp="1601309205839" />
     <state x="676" y="225" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1600607352978" />
     <state x="2453" y="231" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1599747314879" />
     <state x="577" y="322" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1600328590806">
